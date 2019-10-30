@@ -37,7 +37,7 @@ a:focus {
 
 .jumbotron {
   position: relative;
-  background: url("../imgs/jumbotron.jpg");
+  background: url("../imgs/jumbotron_reverse.jpg");
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -49,36 +49,33 @@ a:focus {
 .jumbotron h1 {
   position: absolute;
   color: #ffffff;
-  font-size: 5rem;
-  left: 5%;
+  font-size: 4rem;
+  right: 5%;
   top: 25%;
   margin: 0px;
   padding: 0px;
   max-width: 40%;
   text-align: left;
   text-shadow: 0 8px 16px rgba(0,0,0,.4);
+  text-align: right;
 }
 .jumbotron h1 span {
   font-size: 80%;
   color: #dddddd;
   line-height: 2;
 }
-
-@media (max-width: 992px) {
-  .jumbotron {
-    height: 50vh;
-    width: 100vw;
-  }
+@media (max-width: 1200px) {
   .jumbotron h1 {
     font-size: 3rem;
-    left: 5%;
-    top: 10%;
+    right: 5%;
     max-width: 40%;
-    /* line-height: 1.6; */
   }
-  .jumbotron h1 span {
-    font-size: 80%;
-    line-height: 1.6;
+}
+@media (max-width: 992px) {
+  .jumbotron h1 {
+    font-size: 3rem;
+    right: 5%;
+    max-width: 50%;
   }
 }
 @media (max-width: 768px) {
@@ -86,14 +83,9 @@ a:focus {
     height: 50vh;
   }
   .jumbotron h1 {
-    font-size: 1.5rem;
-    left: 5%;
-    top: 5%;
-    max-width: 40%;
-  }
-  .jumbotron h1 span {
-    font-size: 80%;
-    line-height: 1.6;
+    right: 5%;
+    top: 15%;
+    max-width: 60%;
   }
 }
 
@@ -105,36 +97,33 @@ section {
 }
 
 .section-title {
-  width: 20vw;
-  height: 20vw;
+  width: 24vw;
+  height: 24vw;
   background-color: #ffffff;
-  z-index: 1;
   border: 10px solid #ffd607;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  position: absolute;
-  top: -10vw;
-  left: 50%;
-  margin-left: -10vw;
   box-shadow: 0 8px 16px rgba(0,0,0,.1);
+  margin: 4vw auto 4vw auto;
+  top: -12vw !important;
+  margin-left: -12vw !important;
 }
 .section-title h1 {
   padding: 0px;
   margin: 0px;
 }
-.section-content {
-  padding-top: 14vw;
-}
+
+
 @media (max-width: 992px) {
   .section-title {
     width: 30vw;
     height: 30vw;
-    margin-left: -15vw;
+    margin-left: -15vw !important;
     padding: 10px;
-    top: -15vw;
+    top: -15vw !important;
     border: 8px solid #ffd607;
   }
   .section-content {
@@ -143,152 +132,262 @@ section {
 }
 @media (max-width: 768px) {
   .section-title {
-    width: 60vw;
-    height: 60vw;
-    margin-left: -30vw;
+    width: 36vw;
+    height: 36vw;
+    margin-left: -18vw !important;
     padding: 10px;
-    top: -30vw;
+    top: -18vw !important;
     border: 8px solid #ffd607;
   }
   .section-title h1 {
     font-size: 1.5rem;
+    font-size: 120%;
   }
   .section-content {
-    padding-top: 32vw;
+    padding-top: 26vw !important;
     font-size: 80%;
     line-height: 1.5 !important;
   }
+}
+@media (max-width: 576px) {
+  .section-title {
+    width: 50vw;
+    height: 50vw;
+    margin-left: -25vw !important;
+    padding: 10px;
+    top: -25vw !important;
+    border: 8px solid #ffd607;
+  }
+  .section-content {
+    padding-top: 32vw !important;
+  }
+}
+
+.section-content {
+  text-align: center;
+}
+.section-content h1 {
+  margin: 0 auto;
+  margin-top: 30px;
+  display: block;
 }
 .section-content p {
   line-height: 3;
   text-shadow: 0 8px 16px rgba(0,0,0,.1);
 }
 
+.time_cover {
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 0px;
+  max-width:90%;
+  /* display: block; */
+  display: inline-block;
+}
+.time_cover:hover {
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  box-shadow: 0 10px 20px rgba(0,0,0,.4);
+}
+.time_cover img {
+  max-width:100%;
+}
 .video-wrapper {
    position:relative;
    margin: 0 auto;
    padding: 56.25% 0 0;
    margin-top: 4vw;
-   margin-bottom: 8vw;
+   margin-bottom: 4vw;
 }
-.quote {
-  position: relative;
-}
-.quote .section-title {
+
+#whoami .section-title {
+  z-index: 1;
   position: absolute;
-  top: 6vw;
-  left: 16vw;
-  width: 32vw;
-  height: 32vw;
-  font-size: 200% !important;
-  border: 14px solid #2979FF;
-
-}
-.quote span {
-  color: #444444;
-  font-size: 80%;
-  line-height: 2;
-}
-@media (max-width: 992px) {
-  .quote .section-title {
-    top: 4vw;
-    width: 40vw;
-    height: 40vw;
-    border: 10px solid #2979FF;
-  }
-  .quote .section-title h1 {
-    font-size: 70% !important;
-  }
-
-}
-
-@media (max-width: 768px) {
-  .quote {
-    margin-top: 100vw;
-  }
-  .quote .section-title {
-    position: absolute;
-    top: -90vw;
-    left: 50%;
-    width: 80vw;
-    height: 80vw;
-    margin-left: -40vw;
-    /* font-size: 200% !important; */
-    border: 8px solid #2979FF;
-
-  }
-}
-
-.quote-two {
-  position: relative;
-}
-.quote-two .section-title {
-  position: absolute;
-  top: 20vw;
-  right: 3vw;
-  width: 32vw;
-  height: 32vw;
+  top: -10vw;
+  left: 50%;
   margin: 0px;
-  border: 14px solid #2979FF;
+  margin-left: -10vw;
 }
-.quote-two span {
-  color: #444444;
-  font-size: 80%;
-  line-height: 2;
+#whoami .section-content {
+  padding-top: 14vw;
+}
+#whoami h2 {
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+
+#whyiexist {
+  margin-top: 14vw;
+  position: relative;
+  background: url("../imgs/stevie_two.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  margin-bottom: 0px;
+  border-radius: 0px;
+}
+
+#whyiexist .section-title {
+  z-index: 1;
+  position: absolute;
+  top: -10vw;
+  left: 50%;
+  margin: 0px;
+  margin-left: -10vw;
+}
+#whyiexist .section-content {
+  padding-top: 10vw;
+}
+#whyiexist h2 {
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+
+#whyiexist .section-fact {
+  width: 16vw;
+  height: 16vw;
+  background-color: #ffffff;
+  border: 10px solid #2979FF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 16px rgba(0,0,0,.1);
+  margin: 0 auto;
+  margin-bottom: 4vw;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+#whyiexist .section-fact h1 {
+  padding: 0px;
+  margin: 0px;
+  font-size: 100%;
+}
+@media (max-width: 1200px) {
+  #whyiexist .section-fact {
+    width: 20vw;
+    height: 20vw;
+  }
 }
 @media (max-width: 992px) {
-  .quote-two .section-title {
-    width: 40vw;
-    height: 40vw;
-    border: 10px solid #2979FF;
+  #whyiexist {
+    margin-top: 24vw;
   }
-  .quote-two .section-title h1 {
-    font-size: 140% !important;
+  #whyiexist .section-fact {
+    width: 26vw;
+    height: 26vw;
+    margin-bottom: 10vw;
   }
-
+  #whyiexist .section-fact h1 {
+    font-size: 90%;
+  }
 }
 @media (max-width: 768px) {
-  .quote-two {
-    margin-top: 100vw;
+  #whyiexist {
+    margin-top: 26vw !important;
   }
-  .quote-two .section-title {
-    position: absolute;
-    top: -90vw;
-    left: 50%;
-    width: 80vw;
-    height: 80vw;
-    margin-left: -40vw;
-    /* font-size: 200% !important; */
-    border: 8px solid #2979FF;
+  #whyiexist .section-content {
+    padding-top: 20vw !important;
+  }
+  #whyiexist .section-fact {
+    width: 18vw;
+    height: 18vw;
+    margin-bottom: 5vw !important;
+    border: 5px solid #2979FF;
+    min-width: 140px;
+    min-height: 140px;
+  }
+  #whyiexist .section-fact h1 {
+    font-size: 75%;
+  }
+}
+@media (max-width: 576px) {
+  #whyiexist .section-content {
+    padding-top: 28vw !important;
+  }
 
+  #whyiexist .section-fact {
+    margin-bottom: 10vw !important;
   }
 }
 
-#whereivebeen h1 {
-  margin: 0 auto;
-  display: block;
-  text-align: center;
-}
-#whereivebeen a {
-  margin: 0 auto;
-}
-
-
-#whatido .col-sm-4 p {
-  line-height: 1.5;
-}
-#whatido .col-sm-4 p:first-of-type {
+#howcanihelp h3 {
   margin-top: 30px;
-}
-
-.time_cover {
-  max-width:90%;
-  margin: 0 auto;
   margin-bottom: 30px;
-  margin-top: 30px;
-
 }
 
+#howcanihelp img {
+  margin: 0 auto;
+}
+#howcanihelp .stevie-background {
+  position: relative;
+  background: url("../imgs/stevie_one.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  margin-bottom: 0px;
+  border-radius: 0px;
+}
+#howcanihelp .section-title {
+  z-index: 1;
+  position: absolute;
+  top: -10vw;
+  left: 50%;
+  margin: 0px;
+  margin-left: -10vw;
+}
+#howcanihelp .section-content {
+  padding-top: 14vw;
+}
+@media (max-width: 992px) {
+  #howcanihelp .section-content {
+    padding-top: 24vw;
+  }
+}
+@media (max-width: 768px) {
+  #howcanihelp img {
+    max-width: 60%;
+  }
+  #howcanihelp .section-title {
+    z-index: 1;
+    position: relative;
+    top: 10vw !important;
+    /* left: 50%; */
+    margin: 0px;
+    margin-left: -10vw;
+  }
+  #howcanihelp .section-content {
+    padding-top: 14vw;
+  }
+}
+
+
+
+#social .section-title {
+  z-index: 1;
+  position: absolute;
+  top: -10vw;
+  left: 50%;
+  margin: 0px;
+  margin-left: -10vw;
+}
+#social .section-content {
+  padding-top: 14vw;
+}
 
 #social h3 {
   font-family: 'Anton';
