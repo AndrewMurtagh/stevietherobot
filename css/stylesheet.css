@@ -101,7 +101,7 @@ section {
   width: 24vw;
   height: 24vw;
   background-color: #ffffff;
-  border: 10px solid #ffd607;
+  border: 1em solid #ffd607;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -117,7 +117,6 @@ section {
   margin: 0px;
 }
 
-
 @media (max-width: 992px) {
   .section-title {
     width: 30vw;
@@ -125,7 +124,7 @@ section {
     margin-left: -15vw !important;
     padding: 10px;
     top: -15vw !important;
-    border: 8px solid #ffd607;
+    border: 1em solid #ffd607;
   }
   .section-content {
     padding-top: 20vw;
@@ -138,7 +137,7 @@ section {
     margin-left: -18vw !important;
     padding: 10px;
     top: -18vw !important;
-    border: 8px solid #ffd607;
+    border: 1em solid #ffd607;
   }
   .section-title h1 {
     font-size: 1.5rem;
@@ -157,7 +156,7 @@ section {
     margin-left: -25vw !important;
     padding: 10px;
     top: -25vw !important;
-    border: 8px solid #ffd607;
+    border: 1em solid #ffd607;
   }
   .section-content {
     padding-top: 32vw !important;
@@ -173,8 +172,9 @@ section {
   display: block;
 }
 .section-content p {
-  line-height: 3;
+  line-height: 1.5;
   text-shadow: 0 8px 16px rgba(0,0,0,.1);
+  margin: auto 1em;
 }
 
 .time_cover {
@@ -225,7 +225,6 @@ section {
   margin-top: 60px;
 }
 
-
 #whyiexist {
   margin-top: 14vw;
   position: relative;
@@ -260,7 +259,7 @@ section {
   width: 16vw;
   height: 16vw;
   background-color: #ffffff;
-  border: 10px solid #2979FF;
+  border: 0.5em solid #2979FF;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -306,7 +305,7 @@ section {
     width: 18vw;
     height: 18vw;
     margin-bottom: 5vw !important;
-    border: 5px solid #2979FF;
+    border: 0.4em solid #2979FF;
     min-width: 140px;
     min-height: 140px;
   }
@@ -332,13 +331,13 @@ section {
 #howcanihelp img {
   margin: 0 auto;
 }
-#howcanihelp .stevie-background {
+#howcanihelp .akara-background {
   position: relative;
-  background: url("../imgs/stevie_one.jpg");
+  background: url("../imgs/akara_team.jpg");
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 30em;
   width: 100%;
   margin-bottom: 0px;
   border-radius: 0px;
@@ -358,11 +357,21 @@ section {
   #howcanihelp .section-content {
     padding-top: 24vw;
   }
+
+  #howcanihelp .akara-background {
+    height: 20em;
+  }
+
 }
 @media (max-width: 768px) {
   #howcanihelp img {
     max-width: 60%;
   }
+
+  #howcanihelp .akara-background {
+    height: 15em;
+  }
+
   #howcanihelp .section-title {
     z-index: 1;
     position: relative;
@@ -376,7 +385,62 @@ section {
   }
 }
 
+@media (max-width: 320px) {
+  #howcanihelp .akara-background {
+    height: 10em;
+  }
+}
 
+#myteam h3 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+#myteam img {
+  margin: 0 auto;
+}
+#myteam .stevie-background {
+  position: relative;
+  background: url("../imgs/stevie_one.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  margin-bottom: 0px;
+  border-radius: 0px;
+}
+#myteam .section-title {
+  z-index: 1;
+  position: absolute;
+  top: -10vw;
+  left: 50%;
+  margin: 0px;
+  margin-left: -10vw;
+}
+#myteam .section-content {
+  padding-top: 18vw;
+}
+@media (max-width: 992px) {
+  #theteam .section-content {
+    padding-top: 24vw;
+  }
+}
+@media (max-width: 768px) {
+  #theteam img {
+    max-width: 60%;
+  }
+  #theteam .section-title {
+    z-index: 1;
+    position: relative;
+    top: 10vw !important;
+    margin: 0px;
+    margin-left: -10vw;
+  }
+  #theteam .section-content {
+    padding-top: 14vw;
+  }
+}
 
 #social .section-title {
   z-index: 1;
@@ -387,7 +451,7 @@ section {
   margin-left: -10vw;
 }
 #social .section-content {
-  padding-top: 14vw;
+  padding-top: 18vw;
 }
 
 #social h3 {
@@ -397,6 +461,7 @@ section {
   text-shadow: none;
   margin: 0px;
   line-height: 1.5;
+  text-shadow: 0 0 1px rgba(0,0,0,0.6);
 }
 #social .social-link {
   color: #414141;
