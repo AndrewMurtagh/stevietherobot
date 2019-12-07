@@ -1,10 +1,24 @@
-body
+html
 {
 	overflow-x:hidden;
-	font-family: 'Nunito', sans-serif;
-	color: #212121;
+    font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+}
+@media (min-width: 992px) /* lg */
+{
+	html {font-size: 18px;}
+}
+
+body
+{
 	text-align: center;
+	color: #313131;
 	background: #eceff1;
+}
+
+:focus
+{
+	outline: none !important;
 }
 
 .container-fluid
@@ -20,25 +34,28 @@ body
 	background-position: top;
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 100vh;
+	height: 60vh;
 	margin: 0;
+}
+@media (min-width: 576px) /* sm */
+{
+	.jumbotron {height: 100vh;}
 }
 
 .jumbotron blockquote
 {
 	color: #ffffff;
 	padding-right: 3vw;
-	padding-top: 5vw;
-	font-size: 3vw;
+	font-size: 4vw;
 	line-height: 1;
-	text-shadow: 0 8px 16px rgba(0,0,0,.4);
+	text-shadow: 0 8px 16px rgba(0,0,0,0.4);
 }
-
-@media (max-width: 575.98px)
+@media (min-width: 576px) /* sm */
 {
 	.jumbotron blockquote
 	{
-		font-size: 5vw;
+		padding-top: 3vw;
+		font-size: 3vw;
 	}
 }
 
@@ -71,23 +88,17 @@ body
 .section-title h1
 {
 	font-size: 3vw;
-	padding-left: 5%;
-	padding-right: 5%;
 	margin: 0;
 }
 
 .section-content
 {
 	margin-top: -12vw;
+	padding: 4vmin;
 }
 
 @media (max-width: 575.98px)
 {
-	.jumbotron
-	{
-		height: 60vh;
-	}
-
 	.section-title
 	{
 		top: -24vw;
@@ -110,9 +121,22 @@ body
 
 /*------------------------------------------------------------*/
 
+#whoami .section-content p
+{
+	margin: 0 auto;
+	max-width: 600px;
+}
+
+#whoami img:hover
+{
+	box-shadow: 0 10px 20px rgba(0,0,0,.4);
+}
+
 #whoami .time_cover img
 {
 	height: 90vmin;
+	margin-top: 4vmin;
+	margin-bottom: 4vmin;
 
 	-webkit-transition: all 0.2s linear;
 	-o-transition: all 0.2s linear;
@@ -126,21 +150,22 @@ body
 	-ms-transform: scale(1.05); /* IE 9 */
 	-webkit-transform: scale(1.05); /* Safari 3-8 */
 	transform: scale(1.05);
-	box-shadow: 0 10px 20px rgba(0,0,0,.4);
 }
 
-/*------------------------------------------------------------*/
-
-.video-wrapper
+#whoami .press
 {
-	position:relative;
 	margin: 0 auto;
-	padding: 56.25% 0 0;
+	max-width: 600px;
+}
+
+#whoami .press-item
+{
+	padding-bottom: 3vw;
 }
 
 /*------------------------------------------------------------*/
 
-#whyiexist
+#whywasicreated
 {
 	background: url("../imgs/stevie_two.jpg");
 	background-position: top;
@@ -148,32 +173,32 @@ body
 	background-repeat: no-repeat;
 }
 
-#whyiexist .section-title
+#whywasicreated .section-title
 {
 	margin-top: 12vw;
 }
 @media (max-width: 575.98px)
 {
-	#whyiexist .section-title
+	#whywasicreated .section-title
 	{
 		margin-top: 24vw;
 	}
 }
 
-#whyiexist .section-content
+#whywasicreated .section-content
 {
 	margin-bottom: 0;
 	padding-bottom: 12vw;
 }
 @media (max-width: 575.98px)
 {
-	#whyiexist .section-content
+	#whywasicreated .section-content
 	{
 		padding-bottom: 24vw;
 	}
 }
 
-#whyiexist .section-fact
+#whywasicreated .section-fact
 {
 	width: 20vw;
 	height: 20vw;
@@ -186,20 +211,62 @@ body
 	box-shadow: 0 8px 16px rgba(0,0,0,.1);
 	margin: 8vw auto 8vw auto; /*center in col*/
 }
+@media (max-width: 575.98px)
+{
+	#whywasicreated .section-fact
+	{
+		width: 40vw;
+		height: 40vw;
+		border: 2vw solid #2979FF;
+	}
+}
 
-#whyiexist .section-fact h5
+#whywasicreated .section-fact h5
 {
 	font-size: 1.8vw;
 	padding-left: 5%;
 	padding-right: 5%;
 	margin: 0;
 }
+@media (max-width: 575.98px)
+{
+	#whywasicreated .section-fact h5
+	{
+		font-size: 3.6vw;
+	}
+}
 
 /*------------------------------------------------------------*/
 
-#howcanihelp img
+#howcanihelp .section-content img
 {
 	max-width: 60vw;
+}
+
+#howcanihelp .section-content h5
+{
+	padding: 0.5rem;
+}
+
+#howcanihelp video
+{
+	display: block;
+}
+
+#howcanihelp .video-wrapper
+{
+	position: relative;
+	padding-top: 56.25%;
+	line-height: 0;
+}
+
+#howcanihelp .video-wrapper iframe
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 #howcanihelp .akara-background
@@ -209,50 +276,67 @@ body
 	background-position: top;
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 45vw;
+	height: 58vw;
 	width: 100vw;
 	margin-bottom: 0;
 	border-radius: 0;
 }
+@media (max-width: 575.98px)
+{
+	#howcanihelp .akara-background
+	{
+		height: 70vw;
+	}
+}
 
 /*------------------------------------------------------------*/
 
-#myteam img
+#myteam .section-content img
 {
 	max-width: 60vw;
 }
 
-#myteam .stevie-background
+#myteam .section-content h4
 {
-	position: relative;
-	background: url("../imgs/stevie_one.jpg");
-	background-position: top;
-	background-size: cover;
-	background-repeat: no-repeat;
-	height: 100vh;
-	width: 100vw;
+	padding-top: 0.5rem;
 	margin-bottom: 0;
-	border-radius: 0;
+}
+
+#myteam .section-content p
+{
+	font-size: 1.1rem;
 }
 
 /*------------------------------------------------------------*/
 
-#social .section-content h1
+#carousel img
 {
-	font-family: 'Anton';
-	color: #ffd607;
-	text-shadow: 0 0 2px rgba(0,0,0,0.6);
+	object-fit: cover;
+	object-position: top;
+	height: 100vh;
+	width: 100%;
 }
 
-#social .section-content p
+/*------------------------------------------------------------*/
+
+#contactme .section-content
 {
 	font-size: 1.2rem;
 }
 
-#social .social-link
+#contactme .section-content h1
 {
+	font-family: 'Anton';
+	font-size: 2.5em;
+	color: #ffd607;
+	text-shadow: 0 0 2px rgba(0,0,0,0.6);
+}
+
+#contactme .social-link
+{
+	font-size: 2.5em;
+	line-height: 1;
 	color: #414141;
-	font-size: 3rem;
 
 	-webkit-transition: all 0.3s linear;
 	-o-transition: all 0.3s linear;
@@ -261,7 +345,7 @@ body
 	transition: all 0.3s linear;
 }
 
-#social .social-link:hover
+#contactme .social-link:hover
 {
 	color: #ffd607;
 }
@@ -271,4 +355,7 @@ body
 #copyright
 {
 	color: #444444;
+	font-size: 16px;
+	padding-top: 10px;
+	padding-bottom: 5px;
 }
