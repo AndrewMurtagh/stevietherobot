@@ -313,7 +313,7 @@ body
 {
 	object-fit: cover;
 	object-position: top;
-	height: 100vh;
+	height: 100vmin;
 	width: 100%;
 }
 
